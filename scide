@@ -1,0 +1,6 @@
+#!/bin/bash
+
+SCIDE_SYM=$(readlink $0)
+SCIDE_BIN=${SCIDE_SYM:-$0}
+export SCIDE_HOME=`dirname $SCIDE_BIN`
+screen -c "$SCIDE_HOME/screenrc"

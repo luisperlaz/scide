@@ -1,0 +1,12 @@
+startup_message off
+obuflimit 1000
+screen -t code vi -u $SCIDE_HOME/vimrc -c VSTreeExplore
+split
+focus down
+screen -t sbt sbt ~test-run
+resize 15
+focus up
+
+bind q eval "focus down" "screen -t sbt sbt console-quick"
+bind w eval "kill" "focus up"
+bind z quit
