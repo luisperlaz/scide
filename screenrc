@@ -3,7 +3,7 @@ obuflimit 1000
 screen -t code vi -u $SCIDE_HOME/vimrc -c VSTreeExplore
 split
 focus down
-screen -t sbt sbt ~test-run
+screen -t sbt sbt ~test
 resize 15
 focus up
 
